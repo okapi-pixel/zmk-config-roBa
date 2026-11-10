@@ -1,7 +1,56 @@
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+
+// ==========================================
+// Windows 11 日本語配列 (JIS 106/109)
+// ==========================================
+
+// --- 日本語入力キー ---
+#define JP_HANZEN       GRAVE           // 半角/全角
+#define JP_KANA         INT_KANA        // カタカナ/ひらがな
+#define JP_HENKAN       INT_HENKAN      // 変換
+#define JP_MUHENKAN     INT_MUHENKAN    // 無変換
+
+// --- 数字・Shift記号 ---
+#define JP_DQUOTE       LS(N2)          // "
+#define JP_AMPERSAND    LS(N6)          // &
+#define JP_QUOTE        LS(N7)          // '
+#define JP_LPAREN       LS(N8)          // (
+#define JP_RPAREN       LS(N9)          // )
+
+// --- 記号 ---
+#define JP_EXCLAMATION  LS(N1)          // !
+#define JP_HASH         LS(N3)          // #
+#define JP_DOLLAR       LS(N4)          // $
+#define JP_PERCENT      LS(N5)          // %
+#define JP_EQUAL        LS(MINUS)       // =
+#define JP_PLUS         LS(SEMICOLON)   // +
+#define JP_ASTERISK     LS(SQT)         // *
+#define JP_COLON        SQT             // :
+#define JP_SEMICOLON    SEMICOLON       // ;
+#define JP_AT           LBKT            // @
+#define JP_CARET        EQUAL           // ^
+#define JP_TILDE        LS(EQUAL)       // ~
+#define JP_BACKQUOTE    LS(LBKT)        // `
+
+// --- 括弧 ---
+#define JP_LBRACKET     RBKT            // [
+#define JP_RBRACKET     BSLH            // ]
+#define JP_LBRACE       LS(RBKT)        // {
+#define JP_RBRACE       LS(BSLH)        // }
+
+// --- 円記号・バックスラッシュ ---
+#define JP_YEN          INT_YEN         // ￥
+#define JP_BACKSLASH    INT_YEN         // バックスラッシュ
+#define JP_PIPE         LS(INT_YEN)     // |
+#define JP_UNDERSCORE   LS(INT_RO)      // _
+
+// ==========================================
+// ここから既存のroBa設定
+// ==========================================
 
 &mt {
     flavor = "balanced";
