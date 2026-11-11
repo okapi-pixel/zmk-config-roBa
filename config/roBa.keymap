@@ -155,6 +155,20 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        scroll_encoder: scroll_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SCROLL_ENCODER";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        };
+
+        scroll_encoder_h: scroll_encoder_h {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SCROLL_ENCODER_H";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+        };
     };
 
     keymap {
@@ -162,13 +176,13 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W     &kp E      &kp R                          &kp T                                                        &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S     &kp D      &kp F                          &kp G        &kp LS(LG(S))                    &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
-&mt LEFT_SHIFT Z  &kp X     &kp C      &kp V                          &kp B        &mt LGUI COLON                   &kp DEL        &lt 2 N      &kp M  &kp COMMA  &kp DOT  &kp LS(N7)
-&kp LCTRL         &kp LALT  &lt 1 TAB  &lt_to_layer_0 6 INT_MUHENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_HENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp SLASH
+&kp Q             &kp W     &kp E        &kp R                          &kp T                                                        &kp Y        &kp U        &lt 5 I      &kp O    &kp P
+&kp A             &lt 1 S   &mt LCTRL D  &mt LSHFT F                    &mt LALT G   &kp LS(LG(S))                    &kp MINUS      &mt LALT H   &mt LSHFT J  &mt LCTRL K  &kp L    &kp SEMICOLON
+&mt LEFT_SHIFT Z  &kp X     &kp C        &kp V                          &kp B        &mt LGUI COLON                   &kp DEL        &lt 2 N      &kp M        &kp COMMA    &kp DOT  &kp LS(N7)
+&kp LCTRL         &kp LALT  &lt 1 TAB    &lt_to_layer_0 6 INT_MUHENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_HENKAN      &kp BACKSPACE  &lt 1 ENTER                                     &kp SLASH
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         SYMBOL {
@@ -178,6 +192,8 @@
 &trans      &trans      &trans      &trans      &trans      &trans      &trans  &kp LS(EQUAL)  &kp LS(LBKT)  &kp LS(RBKT)  &kp LS(BSLH)  &kp INT_RO
 &trans      &trans      &trans      &trans      &trans      &trans      &trans  &trans                                                   &trans
             >;
+
+            sensor-bindings = <&scroll_encoder_h>;
         };
 
         NUM {
