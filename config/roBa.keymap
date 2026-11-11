@@ -178,7 +178,7 @@
             bindings = <
 &kp Q             &kp W     &kp E        &kp R                          &kp T                                                        &lt 3 Y      &kp U        &lt 5 I      &kp O    &kp P
 &kp A             &lt 1 S   &mt LCTRL D  &mt LSHFT F                    &mt LALT G   &kp LS(LG(S))                    &kp MINUS      &mt LALT H   &mt LSHFT J  &mt LCTRL K  &kp L    &kp SEMICOLON
-&mt LEFT_SHIFT Z  &kp X     &kp C        &kp V                          &kp B        &mt LGUI COLON                   &kp DEL        &lt 2 N      &kp M        &kp COMMA    &kp DOT  &kp LS(N7)
+&mt LEFT_SHIFT Z  &kp X     &kp C        &kp V                          &kp B        &mt LGUI COLON                   &kp DEL        &lt 2 N      &lt 4 M      &kp COMMA    &kp DOT  &kp LS(N7)
 &kp LCTRL         &kp LALT  &lt 1 TAB    &lt_to_layer_0 6 INT_MUHENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_HENKAN      &kp BACKSPACE  &lt 1 ENTER                                     &kp SLASH
             >;
 
