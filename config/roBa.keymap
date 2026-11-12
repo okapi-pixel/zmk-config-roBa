@@ -137,6 +137,26 @@
             key-positions = <22 32>;
             layers = <0>;
         };
+
+        up {
+            bindings = <&kp UP>;
+            key-positions = <7 8>;
+        };
+
+        down {
+            bindings = <&kp DOWN>;
+            key-positions = <31 32>;
+        };
+
+        right {
+            bindings = <&kp RIGHT>;
+            key-positions = <19 20>;
+        };
+
+        left {
+            bindings = <&kp LEFT>;
+            key-positions = <19 18>;
+        };
     };
 
     macros {
@@ -182,10 +202,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W     &kp E        &kp R                          &kp T                                                        &lt 3 Y      &kp U        &lt 5 I      &kp O    &kp P
-&kp A             &lt 1 S   &mt LCTRL D  &mt LSHFT F                    &mt LALT G   &kp LS(LG(S))                    &kp MINUS      &mt LALT H   &mt LSHFT J  &mt LCTRL K  &kp L    &kp SEMICOLON
-&mt LEFT_SHIFT Z  &kp X     &kp C        &kp V                          &kp B        &mt LGUI COLON                   &kp DEL        &lt 2 N      &lt 4 M      &kp COMMA    &kp DOT  &kp LS(N7)
-&kp LCTRL         &kp LALT  &lt 1 TAB    &lt_to_layer_0 6 INT_MUHENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_HENKAN      &kp BACKSPACE  &lt 1 ENTER                                     &kp SLASH
+&kp Q             &kp W     &kp E              &kp R                          &kp T                                                        &lt 3 Y      &kp U        &lt 5 I      &kp O    &kp P
+&kp A             &lt 1 S   &mt LCTRL D        &mt LSHFT F                    &mt LALT G   &kp LS(LG(S))                    &kp MINUS      &mt LALT H   &mt LSHFT J  &mt LCTRL K  &kp L    &kp SEMICOLON
+&mt LEFT_SHIFT Z  &kp X     &mt LS(LG(F23)) C  &kp V                          &kp B        &mt LGUI COLON                   &kp DEL        &lt 2 N      &lt 4 M      &kp COMMA    &kp DOT  &kp LS(N7)
+&kp LCTRL         &kp LALT  &lt 1 TAB          &lt_to_layer_0 6 INT_MUHENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_HENKAN      &kp BACKSPACE  &lt 1 ENTER                                     &kp SLASH
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -215,7 +235,7 @@
             bindings = <
 &kp ESCAPE      &kp LS(TAB)       &kp UP_ARROW    &kp TAB            &kp LG(UP)                                    &kp LG(UP)    &kp LS(TAB)       &kp UP_ARROW    &kp TAB            &trans
 &kp HOME        &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &kp END       &trans            &kp LALT      &trans        &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &trans
-&kp LEFT_SHIFT  &kp LC(LG(LEFT))  &trans          &kp LC(LG(RIGHT))  &kp LG(DOWN)  &kp LC(LGUI)      &kp LC(LGUI)  &kp LG(DOWN)  &kp LC(LG(LEFT))  &trans          &kp LC(LG(RIGHT))  &kp LSHFT
+&kp LEFT_SHIFT  &kp LS(LG(LEFT))  &trans          &kp LS(LG(RIGHT))  &kp LG(DOWN)  &kp LC(LGUI)      &kp LC(LGUI)  &kp LG(DOWN)  &kp LS(LG(LEFT))  &trans          &kp LS(LG(RIGHT))  &kp LSHFT
 &trans          &trans            &trans          &trans             &trans        &trans            &trans        &trans                                                             &trans
             >;
 
